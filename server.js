@@ -32,7 +32,7 @@ app.use(function (req, res, next) {
   next();
 });
 
-var server = app.listen(3000);
+var server = app.listen(process.env.PORT || 8080);
 
 var io = require('socket.io').listen(server);
 
