@@ -13,6 +13,13 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
 
+app.use(express.static(__dirname + '/dist/adil-chat-app'));
+
+app.get('/*', function (req, res) {
+
+  res.sendFile(path.join(__dirname + '/dist/adil-chat-app/index.html'));
+});
+
 // Express CORS setup
 app.use(function (req, res, next) {
   // Website you wish to allow to connect
@@ -35,7 +42,6 @@ app.use(function (req, res, next) {
 var server = app.listen(process.env.PORT || 8080);
 
 var io = require('socket.io').listen(server);
-
 //var path = __dirname + '/views/';
 
 var usersCollection = [];
