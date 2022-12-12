@@ -44,7 +44,7 @@
     "@angular/router": "^7.0.4",
     "body-parser": "^1.18.2",
     "core-js": "^2.5.7",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "formidable": "^1.2.1",
     "ng-chat": "^2.0.4",
     "ng-socket-io": "^0.2.4",
